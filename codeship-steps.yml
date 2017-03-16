@@ -1,5 +1,5 @@
 - service: debug
-  command: env
+  command: codeship_google authenticate
 - service: app
   type: push
   image_name: gcr.io/annular-ocean-161311/app-name
