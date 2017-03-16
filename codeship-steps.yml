@@ -1,6 +1,6 @@
 - service: app
   type: push
-  image_name: gcr.io/project-name/app-name
+  image_name: gcr.io/annular-ocean-161311/app-name
   image_tag: "{{ .Timestamp }}"
   registry: https://gcr.io
   dockercfg_service: gcr_dockercfg

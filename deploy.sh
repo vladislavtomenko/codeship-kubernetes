@@ -2,6 +2,8 @@
 
 set -e
 
+ls -lha
+
 # authenticate to google cloud
 codeship_google authenticate
 
