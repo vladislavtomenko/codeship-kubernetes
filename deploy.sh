@@ -4,6 +4,7 @@ set -e
 
 # authenticate to google cloud
 echo $GOOGLE_AUTH_JSON> key.json
+cat key.json
 gcloud auth activate-service-account --key-file=key.json
 #codeship_google authenticate
 
