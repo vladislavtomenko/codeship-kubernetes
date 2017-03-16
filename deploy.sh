@@ -2,8 +2,6 @@
 
 set -e
 
-env
-
 # authenticate to google cloud
 codeship_google authenticate
 
