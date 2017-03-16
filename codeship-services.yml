@@ -2,6 +2,7 @@ app:
   build:
     image: project-name/app-name
     dockerfile_path: Dockerfile
+  encrypted_env_file: gc.env.encrypted
 google_cloud_deployment:
   image: zachflower/google-cloud-deployment
   add_docker: true
