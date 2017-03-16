@@ -12,4 +12,6 @@ gcloud config set compute/zone us-central1-a
 gcloud container clusters get-credentials cluster-1
 
 # update kubernetes Deployment
+echo $CI_TIMESTAM
 GOOGLE_APPLICATION_CREDENTIALS=/keyconfig.json kubectl set image deployment/deployment-name deployment-name=gcr.io/project-name/app-name:$CI_TIMESTAMP
+echo $GOOGLE_APPLICATION_CREDENTIALS
