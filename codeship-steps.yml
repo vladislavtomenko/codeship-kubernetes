@@ -1,4 +1,4 @@
-- serve: debug
+- service: debug
   command: env
 - service: app
   type: push

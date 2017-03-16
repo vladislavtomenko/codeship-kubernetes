@@ -1,5 +1,6 @@
 debug:
   image: zachflower/google-cloud-deployment
+  add_docker: true
   encrypted_env_file: gc.env.encrypted
 app:
   build:
