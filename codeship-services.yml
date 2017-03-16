@@ -1,0 +1,11 @@
+google_cloud_deployment:
+  image: codeship/google-cloud-deployment
+  add_docker: true
+  encrypted_env_file: gc.env.encrypted
+  volumes:
+    - ./:/deploy
+
+gcr_dockercfg:
+  image: codeship/gcr-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: gc.env.encrypted
