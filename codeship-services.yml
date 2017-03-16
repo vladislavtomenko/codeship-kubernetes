@@ -1,12 +1,6 @@
-debug:
-  image: zachflower/google-cloud-deployment
-  add_docker: true
-  encrypted_env_file: gc.env.encrypted
-  vlumes:
-    - ./:/deploy
 app:
   build:
-    image: project-name/app-name
+    image: annular-ocean-161311/app-name
     dockerfile_path: Dockerfile
   encrypted_env_file: gc.env.encrypted
 google_cloud_deployment:
