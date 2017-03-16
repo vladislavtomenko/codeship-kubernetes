@@ -3,6 +3,7 @@
 set -e
 
 ls -lha
+env
 
 # authenticate to google cloud
 codeship_google authenticate
