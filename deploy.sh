@@ -13,5 +13,5 @@ gcloud container clusters get-credentials cluster-1
 
 # update kubernetes Deployment
 echo $CI_TIMESTAM
-GOOGLE_APPLICATION_CREDENTIALS=/keyconfig.json kubectl set image deployment/deployment-name deployment-name=gcr.io/annular-ocean-161311/app-name:$CI_TIMESTAMP
+GOOGLE_APPLICATION_CREDENTIALS=/keyconfig.json kubectl set image deployment/frontend frontend=gcr.io/annular-ocean-161311/frontend:$CI_TIMESTAMP
 echo $GOOGLE_APPLICATION_CREDENTIALS
