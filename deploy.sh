@@ -6,6 +6,8 @@ ls -lha
 env
 
 # authenticate to google cloud
+codeship_google --help
+codeship_google authenticate --help
 codeship_google authenticate
 
 # set compute zone
