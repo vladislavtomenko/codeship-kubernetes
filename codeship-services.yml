@@ -1,7 +1,7 @@
 app-frontend:
   build:
     image: annular-ocean-161311/frontend
-    dockerfile_path: Dockerfile
+    dockerfile_path: frontend/Dockerfile
   encrypted_env_file: gc.env.encrypted
 app-backend:
   build:
