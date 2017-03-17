@@ -1,14 +1,25 @@
-app:
+app-frontend:
   build:
     image: annular-ocean-161311/frontend
     dockerfile_path: Dockerfile
   encrypted_env_file: gc.env.encrypted
-google_cloud_deployment:
+app-backend:
+  build:
+    image: annular-ocean-161311/backend
+    dockerfile_path: backend/Dockerfile
+  encrypted_env_file: gc.env.encrypted
+google_cloud_deployment_frontend:
   image: zachflower/google-cloud-deployment
   add_docker: true
   encrypted_env_file: gc.env.encrypted
   volumes:
-    - ./:/deploy
+    - ./frontend:/deploy
+google_cloud_deployment_backend:
+  image: zachflower/google-cloud-deployment
+  add_docker: true
+  encrypted_env_file: gc.env.encrypted
+  volumes:
+    - ./backend:/deploy
 gcr_dockercfg:
   image: codeship/gcr-dockercfg-generator
   add_docker: true

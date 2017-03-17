@@ -1,8 +1,16 @@
-- service: app
+- service: app-frontend
   type: push
   image_name: gcr.io/annular-ocean-161311/frontend
   image_tag: "{{ .Timestamp }}"
   registry: https://gcr.io
   dockercfg_service: gcr_dockercfg
-- service: google_cloud_deployment
+- service: app-backend
+  type: push
+  image_name: gcr.io/annular-ocean-161311/backend
+  image_tag: "{{ .Timestamp }}"
+  registry: https://gcr.io
+  dockercfg_service: gcr_dockercfg
+- service: google_cloud_deployment_frontend
+  command: /deploy/deploy.sh
+- service: google_cloud_deployment_backend
   command: /deploy/deploy.sh
